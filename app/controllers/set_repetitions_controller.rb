@@ -1,0 +1,2 @@
+class SetRepetitionsController < ApplicationController
+end
