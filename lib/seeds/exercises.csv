@@ -1,5 +1,5 @@
 name,category,target_muscle_group,equipment,equip_type,ref_link,image,comments
-Barbell Shoulder Press,Shoulders,"Deltoid, Anterior",TRUE,,https://exrx.net/WeightExercises/DeltoidAnterior/BBShoulderPress,,
+Barbell Shoulder Press,Shoulders,"Deltoid, Anterior",TRUE,Barbell,https://exrx.net/WeightExercises/DeltoidAnterior/BBShoulderPress,,
 Pike Press,Shoulders,"Deltoid, Anterior",FALSE,,https://exrx.net/WeightExercises/DeltoidAnterior/BWPikePress,,
 Dumbbell Lateral Raise,Shoulders,"Deltoid, Lateral",TRUE,Dumbbell,https://exrx.net/WeightExercises/DeltoidLateral/DBLateralRaise,,
 Rear Delt Inverted Row,Shoulders,"Deltoid, Posterior",TRUE,Bar,https://exrx.net/WeightExercises/DeltoidPosterior/BWRearDeltInvertedRow,,
