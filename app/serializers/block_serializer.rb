@@ -1,3 +1,4 @@
 class BlockSerializer < ActiveModel::Serializer
-  attributes :id, :name, :exercise_sets
+  attributes :id, :name
+  has_many :exercise_sets
 end
