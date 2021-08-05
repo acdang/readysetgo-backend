@@ -8,7 +8,13 @@
 
 require 'csv'
 
+# detroy order MATTERS! (Exercise, Block, Workout => last)
+WorkoutBlock.destroy_all
+SetRepetition.destroy_all
+ExerciseSet.destroy_all
 Exercise.destroy_all
+Block.destroy_all
+Workout.destroy_all
 
 csv_text = File.read(Rails.root.join('lib', 'seeds', 'exercises.csv'))
 csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')

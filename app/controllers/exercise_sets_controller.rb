@@ -12,6 +12,6 @@ class ExerciseSetsController < ApplicationController
     private
 
     def exercise_set_params
-        params.permit(:exercise_rep_num, :rest_time, :weight, :active_time) # :exercise_id, :set_rep
+        params.permit(:exercise_id, :exercise_rep_num, :rest_time, :weight, :active_time) # :exercise_id, :set_rep
     end
 end
