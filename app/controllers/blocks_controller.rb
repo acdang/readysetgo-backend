@@ -12,6 +12,6 @@ class BlocksController < ApplicationController
     private
 
     def block_params
-        params.permit(:name) # :workout_id
+        params.permit(:name)
     end
 end
