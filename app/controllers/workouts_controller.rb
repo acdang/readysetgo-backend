@@ -6,6 +6,7 @@ class WorkoutsController < ApplicationController
 
     def create
         workout = Workout.create(workout_params)
+        render json: workout
     end
 
     private

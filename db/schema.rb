@@ -22,7 +22,6 @@ ActiveRecord::Schema.define(version: 2021_08_04_181912) do
   end
 
   create_table "exercise_sets", force: :cascade do |t|
-    t.string "name"
     t.integer "rep_nums"
     t.integer "rest_time"
     t.integer "weight"
