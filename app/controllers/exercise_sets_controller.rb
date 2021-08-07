@@ -1,6 +1,6 @@
 class ExerciseSetsController < ApplicationController
     def index
-        exercise_sets = ExerciseSet.all
+        exercise_sets = ExerciseSet.order_by_id
         render json: exercise_sets
     end
 
