@@ -14,6 +14,20 @@ class ExerciseSetsController < ApplicationController
         render json: exercise_sets
     end
 
+    def destroy # MAYBE MAYBE ALL THIS A CUSTOM METHOD???
+        selected_set = ExerciseSet.find_by(id: params[:id])
+
+        # delete associated SetRepetitions
+        set_repetitions = SetRepetition.where("exercise_set_id = '#{params[:id]}'")
+        set_repetitions.delete_all
+
+        # delete Set
+        selected_set.delete
+
+        # render JSON message
+        render json: { message: "The exercise set has been deleted" }
+    end
+
     private
 
     def exercise_set_params
