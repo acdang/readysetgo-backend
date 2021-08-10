@@ -19,6 +19,12 @@ class ExerciseSetsController < ApplicationController
         render json: exercise_sets
     end
 
+    def update
+        exercise_set = ExerciseSet.find_by(id: params[:id])
+        exercise_set.update(exercise_set_params)
+        render json: exercise_set
+    end
+
     def destroy # MAYBE MAYBE ALL THIS A CUSTOM METHOD???
         selected_set = ExerciseSet.find_by(id: params[:id])
 
