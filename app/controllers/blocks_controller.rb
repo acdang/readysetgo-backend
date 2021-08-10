@@ -4,6 +4,11 @@ class BlocksController < ApplicationController
         render json: blocks
     end
 
+    def show
+        block = Block.find_by(id: params[:id])
+        render json: block
+    end
+
     def create
         block = Block.create(block_params)
         render json: block

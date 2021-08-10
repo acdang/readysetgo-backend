@@ -4,6 +4,11 @@ class ExerciseSetsController < ApplicationController
         render json: exercise_sets
     end
 
+    def show
+        exercise_set = ExerciseSet.find_by(id: params[:id])
+        render json: exercise_set
+    end
+
     def create
         # loop through array of ExerciseSet objects and create ExerciseSet
         exercise_sets = exercise_set_params[:object_array].map do | exercise_object |
