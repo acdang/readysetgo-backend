@@ -9,4 +9,6 @@ Rails.application.routes.draw do
 
   post '/set_repetitions/reduce', to: 'set_repetitions#reduce_reps'
   post '/set_repetitions/increase', to: 'set_repetitions#increase_reps'
+
+  post '/workout_blocks/remove', to: 'workout_blocks#remove_instance'
 end

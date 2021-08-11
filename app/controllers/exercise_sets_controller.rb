@@ -30,7 +30,7 @@ class ExerciseSetsController < ApplicationController
 
         # delete associated SetRepetitions
         # set_repetitions = SetRepetition.where("exercise_set_id = '#{params[:id]}'")
-        set_repetitions = selected_set.exercise_sets
+        set_repetitions = selected_set.set_repetitions
         set_repetitions.delete_all
 
         # delete Set
