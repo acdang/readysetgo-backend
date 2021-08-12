@@ -14,7 +14,7 @@ class WorkoutBlocksController < ApplicationController
         ordered = applicable_workout_blocks.order("created_at")
         ordered[workout_block_params[:index_to_remove]].delete
 
-        # Delete Block if it has zero associations to a Workout
+        # Delete Block if it has zero associations to an existing Workout
         check_again = WorkoutBlock.where("block_id = '#{workout_block_params[:block_id]}' and workout_id = '#{workout_block_params[:workout_id]}'")
         if check_again.length == 0
             # block_to_delete = Block.find_by(id: workout_block_params[:block_id])
