@@ -14,8 +14,7 @@ class ExerciseSetsController < ApplicationController
         exercise_sets = exercise_set_params[:object_array].map do | exercise_object |
             ExerciseSet.create(exercise_object)
         end
-        # debugger
-        # exercise_set = ExerciseSet.create(exercise_set_params)
+        
         render json: exercise_sets
     end
 
@@ -25,11 +24,10 @@ class ExerciseSetsController < ApplicationController
         render json: exercise_set
     end
 
-    def destroy # MAYBE MAYBE ALL THIS A CUSTOM METHOD???
+    def destroy
         selected_set = ExerciseSet.find_by(id: params[:id])
 
         # delete associated SetRepetitions
-        # set_repetitions = SetRepetition.where("exercise_set_id = '#{params[:id]}'")
         set_repetitions = selected_set.set_repetitions
         set_repetitions.delete_all
 
@@ -43,9 +41,6 @@ class ExerciseSetsController < ApplicationController
     private
 
     def exercise_set_params
-        # params.permit(:exercise_id, :exercise_rep_num, :rest_time, :weight, :active_time) # :exercise_id, :set_rep
-        # params.permit(:exercise_set_objects_array)
-        # params.permit(exercise_set_objects_array: [:exercise_id, :exercise_rep_num, :rest_time, :weight, :active_time])
         params.require(:exercise_set).permit(:exercise_id, :exercise_rep_num, :rest_time, :weight, :active_time, object_array: [:exercise_id, :exercise_rep_num, :rest_time, :weight, :active_time])
     end
 end
