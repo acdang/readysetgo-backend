@@ -48,3 +48,4 @@ gem "activestorage", ">= 6.1.4.7"
 
 gem "actionpack", ">= 6.1.4.6"
 
+gem "actionview", ">= 6.1.5.1"
